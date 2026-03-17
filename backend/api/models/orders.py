@@ -2,19 +2,32 @@
 
 from __future__ import annotations
 
+from datetime import datetime
+
 from pydantic import BaseModel
 
 
 class OrderRequest(BaseModel):
-    """Placeholder model for order placement requests."""
+    """Request model for placing an order."""
 
     contract_id: str
+    action: str
     units: int
+    exchange: str = "kalshi"
+    paper_trading: bool = True
 
 
 class OrderResponse(BaseModel):
-    """Placeholder model for order placement responses."""
+    """Response model for order placement."""
 
+    contract_id: str
+    action: str
+    units: int
+    price: float
     status: str
-    order_id: str | None = None
+    order_id: str | None
+    exchange: str
+    filled_at: datetime
+    notes: str
+
 
