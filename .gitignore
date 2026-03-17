@@ -1,0 +1,22 @@
+# Environment files (all locations)
+.env
+*.env
+**/.env
+**/*.env
+
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+*.db
+*.sqlite
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

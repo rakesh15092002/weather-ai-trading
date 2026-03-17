@@ -1,9 +1,13 @@
-"""FastAPI app with endpoints /ingest /signals /orders /risk /health."""
+"""FastAPI application entrypoint.
 
-from typing import Any  # placeholder import
+This module defines the FastAPI app instance and will later include routers
+for ingestion, signals, orders, risk, trades, and copilot endpoints.
+"""
+
+from __future__ import annotations
+
+from fastapi import FastAPI
 
 
-async def _placeholder() -> None:
-    """Async placeholder for FastAPI main module."""
-    pass
+app = FastAPI(title="Weather Trading Backend")
 
